@@ -17,7 +17,7 @@ export default {
   },
   methods: {
     callLambda() {
-      fetch("/functions/hello").then(response => response.json()).then((json) => {
+      fetch(".netlify/functions/hello").then(response => response.json()).then((json) => {
         this.lambdaMsg = json.msg
       })
     }
